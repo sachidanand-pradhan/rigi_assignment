@@ -1,6 +1,6 @@
 # Video Player App
 
-A responsive React.js/Next.js application for playing videos from a playlist, featuring seeking, timer, autoplay, speed selector, and playlist reordering.
+A responsive React.js application for playing videos from a playlist, featuring seeking, timer, autoplay, speed selector, and playlist reordering.
 
 ## Features
 
