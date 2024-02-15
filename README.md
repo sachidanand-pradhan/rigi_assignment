@@ -2,6 +2,9 @@
 
 A responsive React.js application for playing videos from a playlist, featuring seeking, timer, autoplay, speed selector, and playlist reordering.
 
+# lighthouse score / performance report
+<img width="1791" alt="Screenshot 2024-02-15 at 11 02 13 PM" src="https://github.com/sachidanand-pradhan/rigi_assignment/assets/53556482/63e88876-6b92-4825-9741-d17f11626ebd">
+
 ## How to Run Locally
 
 1. Clone this repository HTTPS Link: `https://github.com/sachidanand-pradhan/rigi_assignment.git`
