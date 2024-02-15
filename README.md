@@ -26,7 +26,6 @@ A responsive React.js application for playing videos from a playlist, featuring 
 
 - **Playlist reordering:**
   - Users can change the order of videos in the playlist.
-  - This functionality provides a convenient way for users to organize and customize the sequence of videos they want to watch.
 
 ## Technologies Used
 
