@@ -44,10 +44,14 @@ git clone https://github.com/your-username/video-player-app.git
 
 ```
 
-### `cd video-player-app`
-
-### `npm install`
-
-### `npm start`
+```bash
+cd video-player-app
+```
+```bash
+npm install
+```
+```bash
+npm start
+```
 
 
