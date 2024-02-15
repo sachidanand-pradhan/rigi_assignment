@@ -2,6 +2,35 @@
 
 A responsive React.js application for playing videos from a playlist, featuring seeking, timer, autoplay, speed selector, and playlist reordering.
 
+## How to Run Locally
+
+1. Clone this repository: `git clone https://github.com/your-username/your-repo.git`
+2. Navigate to the project folder: `cd rigi_assignment`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and go to [http://localhost:3000](http://localhost:3000)
+
+## Project Structure
+
+- /src
+  - /components
+    - Playlist.jsx
+    - Index.jsx
+    - /VideoPlayer
+      - Player.jsx
+      - ContentDesc.jsx
+  - /context
+    - ContextProvider.js
+  - /data
+    - videoDatas.js
+  - /page
+    - Home.jsx
+    - NavBar.jsx
+    - MyPlayList.jsx
+    - EmptyPlaylist.jsx
+  - app.jsx
+  - index.js
+
 ## Features
 
 - **Play videos from a playlist:**
