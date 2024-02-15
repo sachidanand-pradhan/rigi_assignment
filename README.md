@@ -42,6 +42,7 @@ A responsive React.js/Next.js application for playing videos from a playlist, fe
 ```bash
 git clone https://github.com/your-username/video-player-app.git
 
+```
 
 ### `cd video-player-app`
 
