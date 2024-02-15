@@ -31,9 +31,10 @@ A responsive React.js application for playing videos from a playlist, featuring 
 
 ## Technologies Used
 
-- React.js/Next.js
-- [Your preferred video player library or component]
-- [Any other libraries or dependencies you might have used]
+- React.js
+- Context API
+- Tailwind CSS
+- React Router Dom
 
 ## Installation
 
