@@ -45,7 +45,7 @@ git clone https://github.com/your-username/video-player-app.git
 ```
 
 ```bash
-cd video-player-app
+cd rigi_assignment
 ```
 ```bash
 npm install
