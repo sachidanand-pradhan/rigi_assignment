@@ -17,9 +17,8 @@ A responsive React.js application for playing videos from a playlist, featuring 
   - The application displays a timer that shows the current playback time of the video.
   - Users can easily track the progress of the video and know how much time has elapsed.
 
-- **Autoplay option:**
-  - Users have the option to enable or disable autoplay.
-  - When autoplay is enabled, the next video in the playlist automatically starts playing after the current video finishes.
+- **Autoplay:**
+  - When autoplay is enabled by utilizing the onEnded event in video player component. This ensures that one video automatically plays after the current video ends.
 
 - **Speed selector:**
   - Users can choose the playback speed of the video.
