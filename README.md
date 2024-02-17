@@ -62,6 +62,20 @@ A responsive React.js application for playing videos from a playlist, featuring 
 - **Playlist reordering:**
   - Users can change the order of videos in the playlist.
   - This functionality provides a convenient way for users to organize and customize the sequence of videos they want to watch.
+ 
+- **Next and Previous functionality:**
+
+  - Users can navigate to the next video in the playlist by clicking the "Next" button.
+  - The application provides a "Previous" button to allow users to go back to the previous video.
+  - Context management ensures seamless transitions between videos, maintaining the playback state.
+  - Users have control over the video sequence, enhancing the overall viewing experience.
+
+    
+- **Play/Pause toggle:**
+
+  - Clicking on the video screen toggles between play and pause, providing users with an intuitive control mechanism.
+  - The play/pause functionality responds to user interactions, enhancing user engagement.
+  - The video automatically pauses when the user clicks on the video screen and resumes when clicked again.
 
 - **Fullscreen Feature:**
   - Clicking the fullscreen button expands the video for an immersive full-screen viewing experience.
