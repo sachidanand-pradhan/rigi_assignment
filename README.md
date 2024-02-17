@@ -1,6 +1,7 @@
 # Video Player App
 
-A responsive React.js application for playing videos from a playlist, featuring seeking, timer, autoplay, speed selector, and playlist reordering.
+
+The goal is to develop a responsive Video Player application using React.js, Context API, React Router DOM, Tailwind CSS within a 5-day timeframe. The application should support key features such as playlist management, seeking functionality, timer display, autoplay, and a speed selector. Additionally, users should have the ability to reorder the playlist, enhancing the overall viewing experience. The focus is on creating an intuitive and versatile video player that seamlessly adapts to various screen sizes.
 
 # lighthouse score / performance report
 <img width="1791" alt="Screenshot 2024-02-15 at 11 02 13 PM" src="https://github.com/sachidanand-pradhan/rigi_assignment/assets/53556482/63e88876-6b92-4825-9741-d17f11626ebd">
