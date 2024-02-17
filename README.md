@@ -32,6 +32,8 @@ A responsive React.js application for playing videos from a playlist, featuring 
     - NavBar.jsx
     - MyPlayList.jsx
     - EmptyPlaylist.jsx
+  - /utils
+    - formatTime.js
   - app.jsx
   - index.js
 
