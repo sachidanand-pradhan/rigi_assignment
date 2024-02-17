@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,17 +11,17 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex items-center justify-between">
-        <a href="/" className="text-white text-lg font-semibold">
+        <Link to="/" className="text-white text-lg font-semibold">
           Video Player
-        </a>
+        </Link>
 
         <div className="hidden md:flex space-x-4">
-          <a href="/" className="text-white hover:text-gray-300">
+          <Link to="/" className="text-white hover:text-gray-300">
             Home
-          </a>
-          <a href="/playlist" className="text-white hover:text-gray-300">
+          </Link>
+          <Link to="/playlist" className="text-white hover:text-gray-300">
             PlayList
-          </a>
+          </Link>
         </div>
 
         <div className="md:hidden">
@@ -50,15 +51,20 @@ const Navbar = () => {
         className={`md:hidden ${isMobileMenuOpen ? "" : "hidden"} bg-gray-800`}
       >
         <div className="container mx-auto py-2">
-          <a href="/" className="block text-white hover:text-gray-300 py-2">
+          <Link
+            onClick={toggleMobileMenu}
+            to="/"
+            className="block text-white hover:text-gray-300 py-2"
+          >
             Home
-          </a>
-          <a
-            href="/playlist"
+          </Link>
+          <Link
+            onClick={toggleMobileMenu}
+            to="/playlist"
             className="block text-white hover:text-gray-300 py-2"
           >
             PlayList
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

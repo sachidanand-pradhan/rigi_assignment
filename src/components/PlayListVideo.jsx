@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
-import Player from "./Player/Player";
+import Player from "./VideoPlayer/Player";
+import { MdFullscreenExit } from "react-icons/md";
 
 const PlayListVideo = ({ selectedVideo }) => {
   const [video, setVideo] = useState(selectedVideo || []);
@@ -72,6 +73,16 @@ const PlayListVideo = ({ selectedVideo }) => {
     )}`;
   };
 
+  const handleFullScreen = () => {
+    if (document.fullscreenElement) {
+      // Exit fullscreen if already in fullscreen mode
+      document.exitFullscreen();
+    } else if (videoElem.current.requestFullscreen) {
+      // Request fullscreen for the video element
+      videoElem.current.requestFullscreen();
+    }
+  };
+
   return (
     <div className="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 m-auto mt-2 p-4">
       <video
@@ -87,8 +98,14 @@ const PlayListVideo = ({ selectedVideo }) => {
         {/* <source src={currentVideo.url} type="video/mp4"></source> */}
       </video>
       <div className="flex justify-between text-lg font-bold">
-        <p>{formatDuration(currentTime)}</p>
-        <p>{formatDuration(duration)}</p>
+        <div className="w-[93%] flex justify-between">
+          <p>{formatDuration(currentTime)}</p>
+          <p>{formatDuration(duration)}</p>
+        </div>
+        <MdFullscreenExit
+          className="text-2xl hover:cursor-pointer text-center items-start"
+          onClick={handleFullScreen}
+        />
       </div>
       <Player
         video={video}

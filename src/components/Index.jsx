@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
-import Player from "./Player/Player";
+import Player from "./VideoPlayer/Player";
+import { MdFullscreenExit } from "react-icons/md";
 // import { useVideo } from "../../context/ContextProvider";
 
 const Index = ({ videoData }) => {
@@ -28,20 +29,19 @@ const Index = ({ videoData }) => {
   }, [isplaying, currentVideo]);
 
   const onPlaying = () => {
-    const duration = videoElem.current.duration;
-    const ct = videoElem.current.currentTime;
+    const newDuration = videoElem.current.duration;
+    const newCurrentTime = videoElem.current.currentTime;
 
-    setcurrentVideo({
-      ...currentVideo,
-      progress: (ct / duration) * 100,
-      length: duration,
-    });
+    setcurrentVideo((prevVideo) => ({
+      ...prevVideo,
+      progress: (newCurrentTime / newDuration) * 100,
+      length: newDuration,
+    }));
 
-    setCurrentTime(ct);
-    setDuration(duration);
+    setCurrentTime(newCurrentTime);
+    setDuration(newDuration);
 
     if (videoElem.current.ended) {
-      // console.log("Video has ended");
       onEnded();
     }
   };
@@ -60,17 +60,6 @@ const Index = ({ videoData }) => {
     });
   };
 
-  // const formatDuration = (timeInSeconds) => {
-  //   let minutes = Math.floor(timeInSeconds / 60);
-  //   let seconds = Math.floor(timeInSeconds % 60);
-  //   if (!timeInSeconds || !minutes || !seconds) {
-  //     minutes = 0;
-  //     seconds = 0;
-  //   }
-  //   // if (typeof timeInSeconds === number, minutes, seconds)
-  //   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-  // };
-
   const formatDuration = (timeInSeconds) => {
     if (typeof timeInSeconds !== "number" || isNaN(timeInSeconds)) {
       return "00:00";
@@ -83,6 +72,15 @@ const Index = ({ videoData }) => {
       2,
       "0"
     )}`;
+  };
+
+  const handleFullScreen = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else if (videoElem.current.requestFullscreen) {
+      videoElem.current.requestFullscreen();
+      videoElem.current.play();
+    }
   };
 
   return (
@@ -100,8 +98,14 @@ const Index = ({ videoData }) => {
         {/* <source src={currentVideo.url} type="video/mp4"></source> */}
       </video>
       <div className="flex justify-between text-lg font-bold">
-        <p>{formatDuration(currentTime)}</p>
-        <p>{formatDuration(duration)}</p>
+        <div className="w-[93%] flex justify-between">
+          <p>{formatDuration(currentTime)}</p>
+          <p>{formatDuration(duration)}</p>
+        </div>
+        <MdFullscreenExit
+          className="text-2xl hover:cursor-pointer text-center items-start"
+          onClick={handleFullScreen}
+        />
       </div>
       <Player
         video={video}
