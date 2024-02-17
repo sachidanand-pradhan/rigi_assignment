@@ -89,11 +89,6 @@ const Player = ({
       alert(`Video ${currentVideo.title} is already in your playlist`);
     }
   };
-  // const handlePlaylistclick = () => {
-  //   let newPlayList = [...playList, currentVideo];
-  //   setPlayList(newPlayList);
-  //   alert("Video is added in your playlist");
-  // };
 
   useEffect(() => {
     console.log("Updated playList: ", playList);

@@ -2,6 +2,7 @@ import React from "react";
 import { useRef, useState, useEffect } from "react";
 import Player from "./VideoPlayer/Player";
 import { MdFullscreenExit } from "react-icons/md";
+import { formatDuration } from "../utils/formatTime";
 // import { useVideo } from "../../context/ContextProvider";
 
 const Index = ({ videoData }) => {
@@ -58,20 +59,6 @@ const Index = ({ videoData }) => {
     videoElem.current.addEventListener("canplay", () => {
       videoElem.current.play();
     });
-  };
-
-  const formatDuration = (timeInSeconds) => {
-    if (typeof timeInSeconds !== "number" || isNaN(timeInSeconds)) {
-      return "00:00";
-    }
-
-    const minutes = Math.floor(timeInSeconds / 60);
-    const seconds = Math.floor(timeInSeconds % 60);
-
-    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
-      2,
-      "0"
-    )}`;
   };
 
   const handleFullScreen = () => {

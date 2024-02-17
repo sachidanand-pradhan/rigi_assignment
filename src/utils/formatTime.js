@@ -1,10 +1,13 @@
-const formatTime = (sec) => {
-  const min = Math.floor(sec / 60);
-  const secRemain = Math.floor(sec % 60);
-  return {
-    min: min,
-    sec: secRemain,
-  };
-};
+exports.formatDuration = (timeInSeconds) => {
+  if (typeof timeInSeconds !== "number" || isNaN(timeInSeconds)) {
+    return "00:00";
+  }
 
-export { formatTime };
+  const minutes = Math.floor(timeInSeconds / 60);
+  const seconds = Math.floor(timeInSeconds % 60);
+
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+    2,
+    "0"
+  )}`;
+};

@@ -82,3 +82,9 @@
 //   const divprogress = (offset / width) * 100;
 //   videoElem.current.currentTime = (divprogress / 100) * currentVideo.length;
 // };
+
+// const handlePlaylistclick = () => {
+//   let newPlayList = [...playList, currentVideo];
+//   setPlayList(newPlayList);
+//   alert("Video is added in your playlist");
+// };
