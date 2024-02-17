@@ -56,7 +56,7 @@ const Player = ({
   };
 
   const skiptoNext = () => {
-    console.log("video type and content:", typeof video, video);
+    // console.log("video type and content:", typeof video, video);
     setcurrentVideo((prevVideo) => {
       const index = video.findIndex((x) => x.title === prevVideo.title);
       const newIndex = index === video.length - 1 ? 0 : index + 1;

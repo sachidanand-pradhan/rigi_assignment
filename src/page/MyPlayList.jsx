@@ -5,7 +5,7 @@ import EmptyPlaylist from "./EmptyPlaylist";
 
 const Playlist = () => {
   const { playList } = useVideo();
-  console.log("playlist", playList);
+  // console.log("playlist", playList);
 
   const [isPlaylist, setIsPlaylist] = useState();
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -16,7 +16,7 @@ const Playlist = () => {
 
   const handleVideoClick = (video) => {
     setSelectedVideo(video);
-    console.log("selectedVideo", selectedVideo);
+    // console.log("selectedVideo", selectedVideo);
   };
 
   const handleDragStart = (e, index) => {
